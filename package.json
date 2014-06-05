@@ -2,8 +2,8 @@
   "name": "hue",
   "version": "0.0.0",
   "description": "",
-  "main": "server/app.js",
   "scripts": {
+    "start": "node server/app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +18,11 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Adalden/hue/issues"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "config": "~0.4.36",
+    "express": "~4.4.1",
+    "stylus": "~0.46.2"
   }
 }
