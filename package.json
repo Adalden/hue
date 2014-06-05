@@ -1,0 +1,22 @@
+{
+  "name": "hue",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Adalden/hue.git"
+  },
+  "keywords": [
+    "game",
+    "colors"
+  ],
+  "author": "Dallin Osmun",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Adalden/hue/issues"
+  }
+}
