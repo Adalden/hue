@@ -20,9 +20,12 @@
     "url": "https://github.com/Adalden/hue/issues"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
     "lodash": "~2.4.1",
     "config": "~0.4.36",
     "express": "~4.4.1",
+>>>>>>> 99ba870bfb4b8044b9c1bdf3ee5b4ee5b5be101d
     "stylus": "~0.46.2"
   }
 }
