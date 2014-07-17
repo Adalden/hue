@@ -18,5 +18,8 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Adalden/hue/issues"
+  },
+  "dependencies": {
+    "stylus": "~0.46.2"
   }
 }
