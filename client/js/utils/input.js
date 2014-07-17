@@ -1,5 +1,8 @@
-(function (global) {
+/* global define */
+
+define([], function () {
   'use strict';
+
   var inputs = {};
   var handlers = {};
 
@@ -34,9 +37,9 @@
     handlers[keyCode].push(fn);
   }
 
-  global.input = {
+  return {
     check: isPressed,
     reset: resetKey,
     attach: attachHandler
   };
-}(window));
+});
