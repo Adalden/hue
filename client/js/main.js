@@ -1,7 +1,7 @@
 /* jshint strict:false */
 /* global PIXI, $ */
 
-var assets = []; //['img/player.png'];
+var assets = ['img/mario.jpg'];
 var loader = new PIXI.AssetLoader(assets);
 loader.onComplete = function () {
   loadGame();
