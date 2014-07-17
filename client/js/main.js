@@ -15,10 +15,13 @@ require(['jquery', 'pixi', 'howler', 'lodash', 'utils/input', 'map'], function (
 
   window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (cb) { window.setTimeout(cb, 1000 / 60); };
 
+  var SPEED = 5;
+
   var assets = ['img/mario.jpg'];
   var loader = new PIXI.AssetLoader(assets);
   var renderer;
   var stage;
+  var player;
 
   loader.onComplete = function () {
     loadGame();
@@ -33,7 +36,8 @@ require(['jquery', 'pixi', 'howler', 'lodash', 'utils/input', 'map'], function (
     loadMapTextures();
     var map = createMap();
     stage.addChild(map);
-    map.addChild(createPlayer('img/mario.jpg', 100, 100));
+    player = createPlayer('img/mario.jpg', 100, 100);
+    map.addChild(player);
 
     requestAnimationFrame(animate);
   }
@@ -41,6 +45,15 @@ require(['jquery', 'pixi', 'howler', 'lodash', 'utils/input', 'map'], function (
   function animate() {
     requestAnimationFrame(animate);
     renderer.render(stage);
+    if (input.check(37)) movePlayer(-SPEED, 0);
+    if (input.check(38)) movePlayer(0, -SPEED);
+    if (input.check(39)) movePlayer(SPEED, 0);
+    if (input.check(40)) movePlayer(0, SPEED);
+  }
+
+  function movePlayer(x, y) {
+    player.position.x += x;
+    player.position.y += y;
   }
 
   function createPlayer(location, x, y) {
